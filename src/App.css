@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+}
+*{
+  background-color:black;
+  color: white;
+}
+.home {
+  align-items: right;
+  display: flex;
+}
+
