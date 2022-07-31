@@ -1,8 +1,6 @@
 import { Line } from 'react-chartjs-2';
 
 const Graph = (props) => {
-    // const arr = props.yaxis;
-    // console.log(arr);
     return ( 
         <div style = {
             {
