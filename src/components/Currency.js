@@ -1,5 +1,4 @@
 import axios from 'axios';
-//import { useState } from 'react';
 import Graph from './Graph';
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
@@ -11,13 +10,11 @@ const Currency = () => {
   let array = [];
   let array2 = [];
   let array3 = [];
-  //let array2 = [];
 
   const formatDate = (d) => {
     const date = new Date(d);
     const year = date.getFullYear();
     const month = `0${date.getMonth()+1}`.slice(-2);
-    //console.log(month)
     const day = `0${date.getDate()}`.slice(-2);
 
     return `${day}-${month}-${year}`
@@ -48,19 +45,6 @@ const Currency = () => {
     array3[i] = (x);
   }
 
-  // useEffect(() => {
-    
-  //   axios.get(`https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=6&interval=daily`)
-  //   .then(res => {
-  //     //console.log(res.data.prices);
-  //     setArr(res.data.prices)
-  //     //array2[i] = (res.data.market_data.current_price.usd.toFixed(2));
-  //   })
-  //   .catch(error =>
-  //     console.log(error)
-  //     )
-  // }, [id])
-
   const getReport = () => {
 
     setLabel(array);
@@ -68,7 +52,6 @@ const Currency = () => {
     .then(res => {
       console.log(res.data);
       setArr(res.data.prices)
-      //array2[i] = (res.data.market_data.current_price.usd.toFixed(2));
     })
     .catch(error =>
       console.log(error)
@@ -81,9 +64,7 @@ const Currency = () => {
 
     axios.get(`https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=13&interval=daily`)
     .then(res => {
-      //console.log(res.data.prices);
       setArr(res.data.prices)
-      //array2[i] = (res.data.market_data.current_price.usd.toFixed(2));
     })
     .catch(error =>
       console.log(error)
@@ -96,9 +77,7 @@ const Currency = () => {
 
     axios.get(`https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=27&interval=daily`)
     .then(res => {
-      //console.log(res.data.prices);
       setArr(res.data.prices)
-      //array2[i] = (res.data.market_data.current_price.usd.toFixed(2));
     })
     .catch(error =>
       console.log(error)
